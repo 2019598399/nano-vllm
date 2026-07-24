@@ -1,0 +1,51 @@
+{
+  "smoke": {
+    "profiles": [
+      "prefill_interference"
+    ],
+    "requests": 8,
+    "factors": [
+      0.75
+    ],
+    "paired": 1
+  },
+  "standard": {
+    "profiles": [
+      "prefill_interference",
+      "mixed_chat",
+      "decode_heavy"
+    ],
+    "requests": 48,
+    "factors": [
+      0.5,
+      0.75,
+      1.0,
+      1.25
+    ],
+    "paired": 5
+  },
+  "full": {
+    "profiles": [
+      "prefill_interference",
+      "prefill_interference_output32",
+      "prefill_interference_output128",
+      "mixed_chat",
+      "decode_heavy",
+      "long_context",
+      "prefix_reuse",
+      "no_interference",
+      "handoff_128",
+      "handoff_512",
+      "handoff_1024",
+      "handoff_2048"
+    ],
+    "requests": 200,
+    "factors": [
+      0.5,
+      0.75,
+      1.0,
+      1.25
+    ],
+    "paired": 10
+  }
+}
