@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-07-24",
+  "model": "Qwen3-0.6B",
+  "hardware": {
+    "gpus": [
+      "NVIDIA GeForce RTX 4090 24GB",
+      "NVIDIA GeForce RTX 4090 24GB"
+    ],
+    "gpu_link": "PCIe SYS"
+  },
+  "suite": {
+    "tier": "standard",
+    "completed_runs": 96,
+    "reported_load_factor": 0.75,
+    "paired_repeats_at_reported_load": 5
+  },
+  "metrics": {
+    "decode_heavy|local-dp2": {
+      "p99_itl_ms": 26.924536,
+      "p95_ttft_ms": 53.22881779999995,
+      "output_tok_s": 2672.850200721074,
+      "slo_attainment": 1.0,
+      "per_gpu_goodput_request_s": 4.112725563358886
+    },
+    "decode_heavy|local-tp1": {
+      "p99_itl_ms": 28.784074550000184,
+      "p95_ttft_ms": 47.94056595,
+      "output_tok_s": 2633.079016797215,
+      "slo_attainment": 1.0,
+      "per_gpu_goodput_request_s": 8.225451126717772
+    },
+    "decode_heavy|local-tp2": {
+      "p99_itl_ms": 42.275284,
+      "p95_ttft_ms": 69.50874044999999,
+      "output_tok_s": 2532.4533795568195,
+      "slo_attainment": 0.9375,
+      "per_gpu_goodput_request_s": 4.112725563358886
+    },
+    "decode_heavy|pd": {
+      "p99_itl_ms": 5.912748,
+      "p95_ttft_ms": 137.27113384999984,
+      "output_tok_s": 2573.860689710838,
+      "slo_attainment": 0.9791666666666666,
+      "per_gpu_goodput_request_s": 4.112725563358886
+    },
+    "mixed_chat|local-dp2": {
+      "p99_itl_ms": 27.462596,
+      "p95_ttft_ms": 124.02277259999984,
+      "output_tok_s": 1125.8038935349919,
+      "slo_attainment": 0.9791666666666666,
+      "per_gpu_goodput_request_s": 5.508568592676377
+    },
+    "mixed_chat|local-tp1": {
+      "p99_itl_ms": 38.94612494999631,
+      "p95_ttft_ms": 118.41563059999999,
+      "output_tok_s": 1096.5583594397658,
+      "slo_attainment": 0.9375,
+      "per_gpu_goodput_request_s": 11.017137185352754
+    },
+    "mixed_chat|local-tp2": {
+      "p99_itl_ms": 78.12883634999997,
+      "p95_ttft_ms": 132.9645576,
+      "output_tok_s": 1047.8747444166893,
+      "slo_attainment": 0.625,
+      "per_gpu_goodput_request_s": 0.0
+    },
+    "mixed_chat|pd": {
+      "p99_itl_ms": 7.864068,
+      "p95_ttft_ms": 165.1292611,
+      "output_tok_s": 1112.9965774212435,
+      "slo_attainment": 0.9375,
+      "per_gpu_goodput_request_s": 5.508568592676377
+    },
+    "prefill_interference|local-dp2": {
+      "p99_itl_ms": 27.161083369999993,
+      "p95_ttft_ms": 212.628855,
+      "output_tok_s": 979.9878747689424,
+      "slo_attainment": 1.0,
+      "per_gpu_goodput_request_s": 5.276197790792846
+    },
+    "prefill_interference|local-tp1": {
+      "p99_itl_ms": 28.870514,
+      "p95_ttft_ms": 200.67923169999995,
+      "output_tok_s": 980.6144648617309,
+      "slo_attainment": 1.0,
+      "per_gpu_goodput_request_s": 10.552395581585692
+    },
+    "prefill_interference|local-tp2": {
+      "p99_itl_ms": 81.7233,
+      "p95_ttft_ms": 237.19549904999997,
+      "output_tok_s": 977.1187855062897,
+      "slo_attainment": 0.75,
+      "per_gpu_goodput_request_s": 0.0
+    },
+    "prefill_interference|pd": {
+      "p99_itl_ms": 4.457508,
+      "p95_ttft_ms": 348.5154396,
+      "output_tok_s": 981.0269126789034,
+      "slo_attainment": 1.0,
+      "per_gpu_goodput_request_s": 5.276197790792846
+    }
+  },
+  "best_tested_per_gpu_goodput_request_s": {
+    "baseline|decode_heavy|local-dp2": 6.854542605598143,
+    "baseline|decode_heavy|local-tp1": 13.709085211196285,
+    "baseline|decode_heavy|local-tp2": 4.112725563358886,
+    "baseline|decode_heavy|pd": 4.112725563358886,
+    "baseline|mixed_chat|local-dp2": 9.180947654460628,
+    "baseline|mixed_chat|local-tp1": 14.689516247137005,
+    "baseline|mixed_chat|local-tp2": 3.6723790617842513,
+    "baseline|mixed_chat|pd": 9.180947654460628,
+    "baseline|prefill_interference|local-dp2": 8.793662984654743,
+    "baseline|prefill_interference|local-tp1": 17.587325969309486,
+    "baseline|prefill_interference|local-tp2": 7.0349303877237945,
+    "baseline|prefill_interference|pd": 8.793662984654743
+  },
+  "limitations": [
+    "Synthetic open-loop workloads and calibrated internal SLOs.",
+    "Results apply to this model, hardware, source snapshot, and scheduler.",
+    "PD is evaluated for latency isolation; it is not a universal throughput win."
+  ]
+}
